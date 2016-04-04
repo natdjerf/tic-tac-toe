@@ -1,0 +1,16 @@
+$dark-gray: #4f5b66;
+$light-gray: #c0c5ce;
+$darker-light-gray: #a7adba;
+
+.board {
+  background-color: $darker-light-gray;
+}
+
+.board > div {
+  background: $light-gray;
+}
+
+.navbar-default {
+  background-color: $light-gray;
+  border-color: $light-gray;
+}

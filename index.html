@@ -7,14 +7,109 @@
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+<!-- End Nav Bar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="modal-nav">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                  Sign In
+                </button>
+                <!-- Button trigger modal -->
+              </li>
+              <!-- Single button
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    My Account <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                Single button -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Change Password</a></li>
+                  <li><a href="#">Sign Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+<!-- End Nav Bar -->
+      <h1>Tic Tac Toe!</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <div class="board">
+        <div class="top-right">
+        Top Right
+        </div>
+        <div class="top-center">
+        Top Center
+        </div>
+        <div class="top-left">
+        Top Left
+        </div>
+        <div class="middle-right">
+        Middle Right
+        </div>
+        <div class="middle-center">
+        Middle Center
+        </div>
+        <div class="middle-left">
+        Middle Left
+        </div>
+        <div class="bottom-right">
+        Bottom Right
+        </div>
+        <div class="bottom-center">
+        Bottom Center
+        </div>
+        <div class="bottom-left">
+        Bottom Left
+        </div>
+      </div>
+
+
+
+
+
+
+
+<!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Hi there!</h4>
+                </div>
+                <div class="modal-body">
+                  <form id="sign-in">
+                      <legend>Already have an account? Sign in!</legend>
+                      <input type="text" name="credentials[email]" value placeholder="your email">
+                      <input type="password" name="credentials[password]" value placeholder="your password">
+                      <input type="submit" name="submit" value="Play">
+                  </form>
+                  <form id="sign-up">
+                      <legend>Don't Have An Account?</legend>
+                      <input type="text" name="credentials[email]" value placeholder="email">
+                      <input type="password" name="credentials[password]" value placeholder="password">
+                      <input type="password" name="credentials[password]" value placeholder="password confirmation">
+                      <input type="submit" name="submit" value="Sign up!">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- Modal -->
     </body>
 </html>
