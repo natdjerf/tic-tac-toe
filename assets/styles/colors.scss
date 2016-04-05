@@ -2,12 +2,20 @@ $dark-gray: #4f5b66;
 $light-gray: #c0c5ce;
 $darker-light-gray: #a7adba;
 
+body {
+  background: 
+}
+
 .board {
   background-color: $darker-light-gray;
 }
 
 .board > div {
   background: $light-gray;
+}
+
+.board > div > div {
+  border: 1px solid $darker-light-gray;
 }
 
 .navbar-default {
