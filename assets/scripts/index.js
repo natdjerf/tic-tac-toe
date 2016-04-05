@@ -6,7 +6,9 @@
 // use require without a reference to ensure a file is bundled
 const events = require('./auth/events');
 
+
+// on document ready:
 $(() => {
   events.addHandlers();
-  console.log('loaded!');
+  console.log('Page loaded!');
 });
