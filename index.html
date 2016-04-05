@@ -2,7 +2,6 @@
 <html>
     <head>
       <title>Example</title>
-
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
@@ -89,21 +88,22 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Hi there!</h4>
+                  <h3 class="modal-title" id="myModalLabel">Hi there!</h3>
                 </div>
                 <div class="modal-body">
                   <form id="sign-in">
-                      <legend>Already have an account? Sign in!</legend>
-                      <input type="text" name="credentials[email]" value placeholder="your email">
-                      <input type="password" name="credentials[password]" value placeholder="your password">
+                      <fieldset>
+                      <h4>Already have an account? Sign in!</h4>
+                      <input type="email" name="credentials[email]" placeholder="your email">
+                      <input type="password" name="credentials[password]" placeholder="your password">
                       <input type="submit" name="submit" value="Play">
+                    </fieldset>
                   </form>
                   <form id="sign-up">
-                      <legend>Don't Have An Account?</legend>
-                      <input type="text" name="credentials[email]" value placeholder="email">
-                      <input type="password" name="credentials[password]" value placeholder="password">
-                      <input type="password" name="credentials[password]" value placeholder="password confirmation">
+                      <h4>Don't Have An Account?</h4>
+                      <input type="text" name="credentials[email]" placeholder="email">
+                      <input type="password" name="credentials[password]" placeholder="password">
+                      <input type="password" name="credentials[password]" placeholder="password confirmation">
                       <input type="submit" name="submit" value="Sign up!">
                   </form>
                 </div>
