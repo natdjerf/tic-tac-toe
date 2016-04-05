@@ -1,9 +1,11 @@
 'use strict';
 
+const app = require('../app-data.js');
+
 const signUp = (success, failure, data) => {
   $.ajax({
     method: 'POST',
-    url: 'http://tic-tac-toe.wdibos.com/sign-up',
+    url: app.api + '/sign-up',
     data,
   }).done(success)
   .fail(failure);
@@ -12,15 +14,27 @@ const signUp = (success, failure, data) => {
 const signIn = (success, failure, data) => {
   $.ajax({
     method: 'POST',
-    url: 'http://tic-tac-toe.wdibos.com/sign-in',
+    url: app.api + '/sign-in',
     data,
   }).done(success)
   .fail(failure);
   };
+
+const signOut = (success, failure) => {
+  $.ajax({
+    method: 'DELETE',
+    url: app.api + '/sign-out/' + app.user.id,
+    headers:{
+    Authorization : 'Token token=' + app.user.token,
+    },
+  }).done(success)
+.fail(failure);
+};
 
 
 
 module.exports = {
   signUp,
   signIn,
+  signOut,
 };
