@@ -12,78 +12,52 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li class="modal-nav">
-                <!-- Button trigger modal -->
+              <li class="modal-sign-in">
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                   Sign In
                 </button>
-                <!-- Button trigger modal -->
               </li>
-              <!-- Single button
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    My Account <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-                Single button -->
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Change Password</a></li>
-                  <li><a href="#">Sign Out</a></li>
-                </ul>
+              <li class="modal-sign-out">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+                  My Account
+                </button>
               </li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
 <!-- End Nav Bar -->
-      <h1>Tic Tac Toe!</h1>
-
-      <div class="board">
-        <div class="top-right">
-        Top Right
+        <h1>Tic Tac Toe!</h1>
+        <div class="board">
+          <div class="top-right">
+          Top Right
+          </div>
+          <div class="top-center">
+          Top Center
+          </div>
+          <div class="top-left">
+          Top Left
+          </div>
+          <div class="middle-right">
+          Middle Right
+          </div>
+          <div class="middle-center">
+          Middle Center
+          </div>
+          <div class="middle-left">
+          Middle Left
+          </div>
+          <div class="bottom-right">
+          Bottom Right
+          </div>
+          <div class="bottom-center">
+          Bottom Center
+          </div>
+          <div class="bottom-left">
+          Bottom Left
+          </div>
         </div>
-        <div class="top-center">
-        Top Center
-        </div>
-        <div class="top-left">
-        Top Left
-        </div>
-        <div class="middle-right">
-        Middle Right
-        </div>
-        <div class="middle-center">
-        Middle Center
-        </div>
-        <div class="middle-left">
-        Middle Left
-        </div>
-        <div class="bottom-right">
-        Bottom Right
-        </div>
-        <div class="bottom-center">
-        Bottom Center
-        </div>
-        <div class="bottom-left">
-        Bottom Left
-        </div>
-      </div>
-
-
-
-
-
-
-
-<!-- Modal -->
+<!-- Modal - sign up/sign in -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -94,22 +68,49 @@
                   <form id="sign-in">
                       <fieldset>
                       <h4>Already have an account? Sign in!</h4>
-                      <input type="email" name="credentials[email]" placeholder="your email">
+                      <input type="email" name="credentials[email]" placeholder="Your email">
                       <input type="password" name="credentials[password]" placeholder="your password">
                       <input type="submit" name="submit" value="Play">
                     </fieldset>
                   </form>
                   <form id="sign-up">
+                    <fieldset>
                       <h4>Don't Have An Account?</h4>
                       <input type="text" name="credentials[email]" placeholder="email">
                       <input type="password" name="credentials[password]" placeholder="password">
-                      <input type="password" name="credentials[password]" placeholder="password confirmation">
+                      <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
                       <input type="submit" name="submit" value="Sign up!">
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- Modal  -->
+<!-- Modal change password/sign out-->
+          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <form id="change-password">
+                    <fieldset>
+                      <h4>Change Password</h4>
+                        <input type="email" name="passwords[old]" placeholder="Current Password">
+                        <input type="password" name="passwords[new]" placeholder="New Password">
+                        <input type="submit" name="submit" value="Play">
+                    </fieldset>
+                  </form>
+                  <form id="sign-out">
+                    <fieldset>
+                      <h4>Sign Out</h4>
+                        <input type="submit" name="submit" value="Sign Out">
+                    </fieldset>
                   </form>
                 </div>
               </div>
             </div>
           </div>
 <!-- Modal -->
+
     </body>
 </html>
