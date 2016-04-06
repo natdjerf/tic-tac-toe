@@ -30,36 +30,27 @@
         <h1>Tic Tac Toe!</h1>
         <div class="board">
           <div class="top">
-            <div class="top-right">
-            Top Right
+            <div class="top-right" id="0">
             </div>
-            <div class="top-center">
-            Top Center
+            <div class="top-center" id="1">
             </div>
-            <div class="top-left">
-            Top Left
+            <div class="top-left" id="2">
             </div>
           </div>
           <div class="middle">
-            <div class="middle-right">
-            Middle Right
+            <div class="middle-right" id="3">
             </div>
-            <div class="middle-center">
-            Middle Center
+            <div class="middle-center" id="4">
             </div>
-            <div class="middle-left">
-            Middle Left
+            <div class="middle-left" id="5">
             </div>
           </div>
           <div class="bottom">
-            <div class="bottom-right">
-            Bottom Right
+            <div class="bottom-right" id="6">
             </div>
-            <div class="bottom-center">
-            Bottom Center
+            <div class="bottom-center" id="7">
             </div>
-            <div class="bottom-left">
-            Bottom Left
+            <div class="bottom-left" id="8">
             </div>
           </div>
         </div>
@@ -86,6 +77,14 @@
                       <input type="password" name="credentials[password]" placeholder="password">
                       <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
                       <input type="submit" name="submit" value="Sign up!">
+                    </fieldset>
+                  </form>
+                  <form id="start-player">
+                    <fieldset>
+                      <h4>Who Starts?</h4>
+                      <button name="subject" type="submit" value="player-one">Player One</button>
+                      <button name="subject" type="submit" value="player-two">Player Two</button>
+                      </form>
                     </fieldset>
                   </form>
                 </div>

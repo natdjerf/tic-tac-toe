@@ -24,19 +24,19 @@ require('expose?getFormFields!./lib/get-form-fields.js');
 let gameBoard = [[0,0], [0,1], [0,2], [1,0], [1,1],[1,2], [2,0], [2,1], [2,2]];
 // let playerMoves = []; // x & o?
 let moveCounter = 0;
-let winner;
+let players = ['x', 'o'];
 let player;
-
+let winner;
 
 
 // To identify player as 'x' or 'o' :
 $('.board').on('click', function () {
 	moveCounter++;
   if (moveCounter % 2 === 0) {
-  	player = 'o';
+  	player = players[0];
   }
   else {
-  	player = 'x';
+  	player = players[1];
   }
   console.log('move counter = ' + moveCounter);
 
@@ -44,10 +44,10 @@ $('.board').on('click', function () {
 
 // To populate the board with move :
 $('.board > div > div').on("click", function() {
-  let location = $( event.target );
+  let location = $(event.target).attr('id');
+  console.log($(event.target).attr('id'));
   if ( $ (this).text() !== '') {
     $( this ).text(player);
-    console.log($(this));
     console.log($(event.target));
   }
   else {
@@ -55,6 +55,8 @@ $('.board > div > div').on("click", function() {
   }
   console.log(location + 'was played by player ' + player);
 });
+
+
 
 
 let checkForWinner = function () {
