@@ -18,6 +18,10 @@ const signOutSuccess = (data) => {
   console.log('signed out');
 };
 
+const changePasswordSuccess = () => {
+  console.log('Password changed');
+};
+
 const success = (data) => {
   console.log(data);
 };
@@ -32,6 +36,7 @@ module.exports= {
   signInSuccess,
   signUpSuccess,
   signOutSuccess,
+  changePasswordSuccess,
   success,
   failure,
 };

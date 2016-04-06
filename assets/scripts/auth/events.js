@@ -23,6 +23,12 @@ const addHandlers = () => {
     authApi.signOut(authUi.signOutSuccess, authUi.failure);
     console.log('Sign out clicked');
   });
+  $('#change-password').on('submit', function (event) {
+    event.preventDefault();
+    let data = getFormFields(this);
+    authApi.changePassword(authUi.changePasswordSuccess, authUi.failure, data);
+    console.log('change pass');
+  });
 };
 
 

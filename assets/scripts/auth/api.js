@@ -31,10 +31,24 @@ const signOut = (success, failure) => {
 .fail(failure);
 };
 
+const changePassword = (success, failure, data) => {
+  $.ajax({
+    method: 'PATCH',
+    url: app.api + '/change-password/' + app.user.id,
+    headers:{
+      Authorization : 'Token token=' + app.user.token,
+    },
+    data,
+  }).done(success)
+    .fail(failure);
+};
+
+
 
 
 module.exports = {
   signUp,
   signIn,
   signOut,
+  changePassword,
 };
