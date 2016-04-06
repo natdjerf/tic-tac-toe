@@ -31,25 +31,16 @@ const addHandlers = () => {
   });
 };
 
+const gameHandlers = () => {
+  $('#create-game').on('submit', function (event) {
+    event.preventDefault();
+    authApi.createGame(authUi.createGameSuccess, authUi.failure);
+    console.log('game started');
+  });
+};
 
-
-// $('.board > div > div').on('click', function() {
-//   event.preventDefault();
-//   console.log('move played');
-// });
-// $('.board > div > div').on("click", function() {
-//   $( this ).text('x').css({
-//     "font-size" :  "5em",
-//     "font-color" : "black",
-//     "text-align" : "center",
-//   });
-// });
-// on check - if no val(), text('x or o');
-// $('.top-center').text();
-
-// $('#sign-in').find("[name='credentials[email]']")
-//$('#sign-up').find("[name='credentials[email]']").val();
 
 module.exports = {
     addHandlers,
+    gameHandlers,
   };

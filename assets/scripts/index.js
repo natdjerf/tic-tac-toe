@@ -10,5 +10,6 @@ const events = require('./auth/events');
 // on document ready:
 $(() => {
   events.addHandlers();
+  events.gameHandlers();
   console.log('Page loaded!');
 });
