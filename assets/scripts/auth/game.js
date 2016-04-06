@@ -8,20 +8,20 @@ let movePlayed = function (move) {
 };
 
 
-// let checkAvailability = function () {
-//   if this.$(event.target)
-//   if (app.game.cell !== '') {
-//     console.log('not available');
-//   };
-//   else {
-//     console.log('next move');
-//   }:
-// };
-//
+let checkAvailability = function (move) {
+  if (app.game.cells[move] === '') {
+    console.log('available');
+    this.movePlayed(move);
+  }
+  else {
+    console.log('next move');
+  }
+};
+
 
 
 module.exports={
   movePlayed,
-  // checkAvailability,
+  checkAvailability,
   app,
 };

@@ -42,7 +42,8 @@ const gameHandlers = () => {
     event.preventDefault();
     let move = $(event.target).data('index');
     console.log(move);
-    gameCheck.movePlayed(move);
+    gameCheck.checkAvailability(move);
+    $(event.target).text('x');
   });
 };
 
