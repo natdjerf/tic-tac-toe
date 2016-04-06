@@ -3,6 +3,7 @@
 const authApi = require('./api');
 const authUi = require('./ui');
 const getFormFields = require('../../../lib/get-form-fields');
+const gameCheck = require('./game');
 
 const addHandlers = () => {
   $('#sign-up').on('submit', function (event) {
@@ -37,7 +38,14 @@ const gameHandlers = () => {
     authApi.createGame(authUi.createGameSuccess, authUi.failure);
     console.log('game started');
   });
+  $('.board > div > div').on("click", function(event) {
+    event.preventDefault();
+    let move = $(event.target).data('index');
+    console.log(move);
+    gameCheck.movePlayed(move);
+  });
 };
+
 
 
 module.exports = {
