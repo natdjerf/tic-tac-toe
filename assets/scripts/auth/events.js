@@ -43,7 +43,7 @@ const gameHandlers = () => {
     let move = $(event.target).data('index');
     console.log(move);
     gameCheck.checkAvailability(move);
-    $(event.target).text('x');
+    $(event.target).text(gameCheck.app.game.cells[move]);
   });
 };
 

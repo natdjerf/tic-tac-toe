@@ -2,9 +2,19 @@
 
 const app = require('../app-data.js');
 
+let currentPlayer = true;
+
 let movePlayed = function (move) {
-  app.game.cells[move] = move;
+  if (currentPlayer) {
+  app.game.cells[move] = 'x';
   console.log(app.game);
+  currentPlayer = false;
+  }
+  else {
+  app.game.cells[move] = 'o';
+  console.log(app.game);
+  currentPlayer = true;
+  }
 };
 
 
