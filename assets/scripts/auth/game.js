@@ -6,45 +6,31 @@ let turn = true;
 let gameBoard = ['','','','','','','',''];
 let player;
 let winner;
+let moveCount = 0;
 
 let checkForWinner = function () {
-  if (gameBoard[0] === player && gameBoard[1] === player && gameBoard[2] === player){
-  		winner = player;
-  		console.log(winner + ' is winner');
+  if  ((gameBoard[0] === player && gameBoard[1] === player && gameBoard[2] === player) ||
+      (gameBoard[3] === player && gameBoard[4] === player && gameBoard[5] === player) ||
+      (gameBoard[6] === player && gameBoard[7] === player && gameBoard[8] === player) ||
+      (gameBoard[0] === player && gameBoard[3] === player && gameBoard[6] === player) ||
+      (gameBoard[1] === player && gameBoard[4] === player && gameBoard[7] === player) ||
+      (gameBoard[2] === player && gameBoard[5] === player && gameBoard[8] === player) ||
+      (gameBoard[0] === player && gameBoard[4] === player && gameBoard[8] === player) ||
+      (gameBoard[2] === player && gameBoard[4] === player && gameBoard[6] === player)) {
+  winner = player;
+  console.log(winner + ' is winner');
+  $('.board > div > div').off('click');
+  app.game.over = 'true';
   }
-  else if (gameBoard[3] === player && gameBoard[4] === player && gameBoard[5] === player){
-  		winner = player;
-  		console.log(winner + ' is winner');
+  else if (moveCount === 9) {
+  winner = 'tie';
+  app.game.over = 'true';
   }
-  else if (gameBoard[6] === player && gameBoard[7] === player && gameBoard[8] === player){
-  		winner = player;
-  		console.log(winner + ' is winner');
-  }
-  else if (gameBoard[0] === player && gameBoard[3] === player && gameBoard[6] === player){
-  		winner = player;
-  		console.log(winner + ' is winner');
-  }
-  else if (gameBoard[1] === player && gameBoard[4] === player && gameBoard[7] === player){
-  		winner = player;
-  		console.log(winner + ' is winner');
-  }
-  else if (gameBoard[2] === player && gameBoard[5] === player && gameBoard[8] === player){
-  		winner = player;
-  		console.log(winner + 'is winner');
-  }
-  else if (gameBoard[0] === player && gameBoard[4] === player && gameBoard[8] === player){
-  		winner = player;
-  		console.log(winner + ' is winner');
-  }
-  else if (gameBoard[2] === player && gameBoard[4] === player && gameBoard[6] === player){
-  		winner = player;
-  		console.log(winner + ' is winner');
-  }
+
   else {
   console.log('next move');
-  	}
+  }
 };
-
 
 
 let movePlayed = function (data) {
@@ -55,6 +41,7 @@ let movePlayed = function (data) {
   console.log(app.game);
   console.log(gameBoard);
   this.checkForWinner();
+  moveCount++;
   turn = !turn;
   }
   else {

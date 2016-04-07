@@ -44,7 +44,8 @@ const gameHandlers = () => {
     console.log(data);
     gameCheck.checkAvailability(data);
     $(event.target).text(gameCheck.app.game.cells[data]);
-    // authApi.updateGame(authUi.updateGameSuccess, authUi.failure);
+    authApi.updateGame(authUi.updateGameSuccess, authUi.failure);
+    console.log('patch successfull???');
   });
 };
 
