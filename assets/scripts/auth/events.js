@@ -18,6 +18,7 @@ const addHandlers = () => {
     console.log('Sign in clicked');
     authApi.signIn(authUi.signInSuccess, authUi.failure, data);
     $('#create-game').removeClass('hidden');
+    $('.modal-sign-out').removeClass('hidden');
     $("#sign-in").addClass('hidden');
     $("#sign-up").addClass('hidden');
     console.log(data);
@@ -39,7 +40,9 @@ const gameHandlers = () => {
   $('#create-game').on('submit', function (event) {
     event.preventDefault();
     authApi.createGame(authUi.createGameSuccess, authUi.failure);
-    $('#myModal').modal('hide')
+    gameCheck.resetGame();
+    $('.board>div>div').text('');
+    $('#myModal').modal('hide');
     console.log('game started');
   });
   $('.board > div > div').on("click", function(event) {

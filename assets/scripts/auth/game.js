@@ -70,7 +70,10 @@ let checkAvailability = function (data) {
   }
 };
 
-
+let resetGame = () => {
+  gameBoard = ['','','','','','','',''];
+  $('.board > div > div').on('click');
+};
 
 
 
@@ -79,4 +82,5 @@ module.exports={
   checkAvailability,
   app,
   checkForWinner,
+  resetGame,
 };
