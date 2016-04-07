@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="modal-sign-in">
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                  Sign In
+                  New Game
                 </button>
               </li>
               <li class="modal-sign-out">
@@ -27,33 +27,35 @@
         </div><!-- /.container-fluid -->
       </nav>
 <!-- End Nav Bar -->
-        <h1>Tic Tac Toe!</h1>
+      <div class="title-board">
+        <h1>tic-tac-toe!</h1>
         <div class="board">
           <div class="top">
-            <div class="top-right" id="0">
+            <div class="top-left" data-index="0">
             </div>
-            <div class="top-center" id="1">
+            <div class="top-center" data-index="1">
             </div>
-            <div class="top-left" id="2">
+            <div class="top-right" data-index="2">
             </div>
           </div>
           <div class="middle">
-            <div class="middle-right" id="3">
+            <div class="middle-left" data-index="3">
             </div>
-            <div class="middle-center" id="4">
+            <div class="middle-center" data-index="4">
             </div>
-            <div class="middle-left" id="5">
+            <div class="middle-right" data-index="5">
             </div>
           </div>
           <div class="bottom">
-            <div class="bottom-right" id="6">
+            <div class="bottom-left" data-index="6">
             </div>
-            <div class="bottom-center" id="7">
+            <div class="bottom-center" data-index="7">
             </div>
-            <div class="bottom-left" id="8">
+            <div class="bottom-right" data-index="8">
             </div>
           </div>
         </div>
+      </div>
 <!-- Modal - sign up/sign in -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">

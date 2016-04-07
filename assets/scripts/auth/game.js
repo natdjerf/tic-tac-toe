@@ -19,6 +19,7 @@ let checkForWinner = function () {
       (gameBoard[2] === player && gameBoard[4] === player && gameBoard[6] === player)) {
   winner = player;
   console.log(winner + ' is winner');
+  $('h1').text(winner + ' is winner!');
   $('.board > div > div').off('click');
   app.game.over = 'true';
   }
@@ -26,6 +27,7 @@ let checkForWinner = function () {
   console.log('Tie game.');
   $('.board > div > div').off('click');
   winner = 'tie';
+  $('h1').text('Tie game');
   app.game.over = 'true';
   }
   else {
@@ -72,6 +74,7 @@ let checkAvailability = function (data) {
 
 let resetGame = () => {
   gameBoard = ['','','','','','','',''];
+  $('h1').text('tic-tac-toe');
   $('.board > div > div').on('click');
 };
 
