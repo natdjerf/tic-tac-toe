@@ -23,10 +23,11 @@ let checkForWinner = function () {
   app.game.over = 'true';
   }
   else if (moveCount === 9) {
+  console.log('Tie game.');
+  $('.board > div > div').off('click');
   winner = 'tie';
   app.game.over = 'true';
   }
-
   else {
   console.log('next move');
   }
@@ -41,7 +42,6 @@ let movePlayed = function (data) {
   console.log(app.game);
   console.log(gameBoard);
   this.checkForWinner();
-  moveCount++;
   turn = !turn;
   }
   else {
@@ -50,6 +50,7 @@ let movePlayed = function (data) {
   gameBoard[data] = player;
   console.log(app.game);
   console.log(gameBoard);
+  this.checkForWinner();
   turn = !turn;
   }
 };
@@ -58,10 +59,12 @@ let movePlayed = function (data) {
 let checkAvailability = function (data) {
   if (app.game.cells[data] === '') {
     console.log('available');
+    moveCount++;
     this.movePlayed(data);
+    console.log(moveCount);
   }
   else {
-    console.log('next move');
+    console.log('not available');
   }
 };
 
