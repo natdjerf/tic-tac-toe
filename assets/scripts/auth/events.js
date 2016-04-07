@@ -17,6 +17,9 @@ const addHandlers = () => {
     let data = getFormFields(this);
     console.log('Sign in clicked');
     authApi.signIn(authUi.signInSuccess, authUi.failure, data);
+    $('#create-game').removeClass('hidden');
+    $("#sign-in").addClass('hidden');
+    $("#sign-up").addClass('hidden');
     console.log(data);
   });
   $('#sign-out').on('submit', function (event) {
@@ -36,6 +39,7 @@ const gameHandlers = () => {
   $('#create-game').on('submit', function (event) {
     event.preventDefault();
     authApi.createGame(authUi.createGameSuccess, authUi.failure);
+    $('#myModal').modal('hide')
     console.log('game started');
   });
   $('.board > div > div').on("click", function(event) {

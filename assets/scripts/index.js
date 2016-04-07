@@ -12,8 +12,7 @@ const events = require('./auth/events');
 $(() => {
   events.addHandlers();
   events.gameHandlers();
-  // uiEvents.uiHandlers();
   console.log('Page loaded!');
-  $('.modal-sign-out').hide();
   $('#myModal').modal('show');
+  $('#create-game').addClass('hidden');
 });
