@@ -37,6 +37,7 @@ let checkForWinner = function () {
 let movePlayed = function (data) {
   if (turn) {
   player = 'x';
+  app.game.index = data;
   app.game.cells[data] = player;
   gameBoard[data] = player;
   console.log(app.game);
@@ -46,6 +47,7 @@ let movePlayed = function (data) {
   }
   else {
   player = 'o';
+  app.game.index = data;
   app.game.cells[data] = player;
   gameBoard[data] = player;
   console.log(app.game);

@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../app-data.js');
+const gameCheck = require('./game');
 
 const signUp = (success, failure, data) => {
   $.ajax({
@@ -55,7 +56,12 @@ const createGame = (success, failure, data) => {
     .fail(failure);
   };
 
+// PATCH! slightly working - over is working, index & value are not!! HMM!
+// you're not storing app.game.index or app.game.vale anywhere.
+// oh shit. game over is also not working well.
+
 const updateGame = (success, failure) => {
+  console.log(app.game);
   $.ajax({
     method: 'PATCH',
     url: app.api + '/games/' + app.game.id,
@@ -66,7 +72,7 @@ const updateGame = (success, failure) => {
     "game": {
         "cell": {
         "index": app.game.index,
-        "value": app.game.value,
+        "value": app.game.cells[app.game.index],
         },
       "over": app.game.over,
     },
