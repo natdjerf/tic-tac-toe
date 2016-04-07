@@ -40,10 +40,11 @@ const gameHandlers = () => {
   });
   $('.board > div > div').on("click", function(event) {
     event.preventDefault();
-    let move = $(event.target).data('index');
-    console.log(move);
-    gameCheck.checkAvailability(move);
-    $(event.target).text(gameCheck.app.game.cells[move]);
+    let data = $(event.target).data('index');
+    console.log(data);
+    gameCheck.checkAvailability(data);
+    $(event.target).text(gameCheck.app.game.cells[data]);
+    // authApi.updateGame(authUi.updateGameSuccess, authUi.failure);
   });
 };
 
