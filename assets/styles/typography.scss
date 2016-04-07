@@ -1,9 +1,40 @@
+html {
+  background-image: url(https://hcministry.files.wordpress.com/2015/11/chalkboard.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+}
+
 body {
+  // background-image: url(https://hcministry.files.wordpress.com/2015/11/chalkboard.jpg);
+  // font-family: 'Reenie Beanie', cursive;
+  font-family: 'Shadows Into Light Two', cursive;
+  // font-family: 'Rock Salt', cursive;
+  font-size: 25px;
   height: 100%;
   margin: 0;
   max-width: 650px;
   padding: 0;
+  background: none;
 }
+
+h1 {
+  font-size: 50px;
+}
+
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+
+
 
 .board {
   border-radius: 1px;
@@ -24,8 +55,11 @@ body {
 
 .board > div > div {
   float: left;
+  font-size: 100px;
+  font-weight: bold;
+  height: 100%;
+  text-align: center;
   width: 33.33%;
-  height: 100%
 }
 
 * {
