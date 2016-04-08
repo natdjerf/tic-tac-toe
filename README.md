@@ -54,7 +54,7 @@ The ‘Sign Out’ button will end the user’s current session. Another sign in
 *	auth: api.js, events.js, ui.js
 
 ## Project:
-*	Wireframe: moqups
+*	Wireframe: https://app.moqups.com/nadjerf@gmail.com/zawxrahaMW/view/page/a3f463cbf
 *	Initial User Stories:
 As a player, I want to easily sign into my account and start a tic-tac-toe with an opponent.
 As a player, I want to visualize what the board would look like if I were to play a move before selecting the location.

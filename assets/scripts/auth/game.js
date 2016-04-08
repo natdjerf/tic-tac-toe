@@ -53,6 +53,7 @@ let movePlayed = function (data) {
   console.log(app.game);
   console.log(gameBoard);
   this.checkForWinner();
+  $(event.target).text(app.game.cells[data]);
   turn = !turn;
   }
   else {
@@ -63,6 +64,7 @@ let movePlayed = function (data) {
   console.log(app.game);
   console.log(gameBoard);
   this.checkForWinner();
+  $(event.target).text(app.game.cells[data]);
   turn = !turn;
   }
 };
