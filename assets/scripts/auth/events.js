@@ -27,12 +27,18 @@ const addHandlers = () => {
     event.preventDefault();
     authApi.signOut(authUi.signOutSuccess, authUi.failure);
     console.log('Sign out clicked');
+    $('#myModal2').modal('hide');
+    $('.modal-sign-out').addClass('hidden');
+    $("#sign-in").removeClass('hidden');
+    $("#sign-up").removeClass('hidden');
+    $('#create-game').addClass('hidden');
   });
   $('#change-password').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
     authApi.changePassword(authUi.changePasswordSuccess, authUi.failure, data);
     console.log('change pass');
+    $("#change-password").addClass('hidden');
   });
 };
 
