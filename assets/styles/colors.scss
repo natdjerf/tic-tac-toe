@@ -1,23 +1,71 @@
 $dark-gray: #4f5b66;
 $light-gray: #c0c5ce;
 $darker-light-gray: #a7adba;
-
+$white: #efefef;
+$charcoal: #312f2f;
 
 h1 {
-  color: $light-gray;
+  color: $charcoal;
 }
 
-// .board {
-//   font-size: 5em;
-// }
-//
-// .board > div {
-//   font-size: 5em;
+.board {
+  font-size: 5em;
+  border: 0;
+}
+
+.board > div {
+  font-size: 5em;
+}
+
+// .board > div > div {
+//   border: 3px solid $charcoal;
+//   color: $charcoal;
 // }
 
-.board > div > div {
-  border: 1px solid $darker-light-gray;
+.top-right {
+  border-left: 3px solid $charcoal;
+  border-bottom: 3px solid $charcoal;
+  color: $charcoal;
 }
+
+.top-center {
+  border-left: 3px solid $charcoal;
+  border-bottom: 3px solid $charcoal;
+  color: $charcoal;
+}
+
+.top-left {
+  border-bottom: 3px solid $charcoal;
+  color: $charcoal;
+}
+
+.middle-right {
+  border-left: 3px solid $charcoal;
+  border-bottom: 3px solid $charcoal;
+  color: $charcoal;
+}
+
+.middle-center {
+  border-left: 3px solid $charcoal;
+  border-bottom: 3px solid $charcoal;
+  color: $charcoal;
+}
+
+.middle-left {
+  border-bottom: 3px solid $charcoal;
+  color: $charcoal;
+}
+
+.bottom-center {
+  border-right: 3px solid $charcoal;
+  color: $charcoal;
+}
+
+.bottom-left {
+  border-right: 3px solid $charcoal;
+  color: $charcoal;
+}
+
 
 .navbar-default {
   background-color: none;

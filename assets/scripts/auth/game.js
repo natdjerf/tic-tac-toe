@@ -3,45 +3,43 @@
 const app = require('../app-data.js');
 
 let turn = true;
-let gameBoard = ['','','','','','','',''];
+let gameBoard = ['', '', '', '', '', '', '', ''];
 let player;
 let winner;
 let moveCount = 0;
 
-
 // Clear the board to start another game without refreshing page:
 let resetGame = () => {
-  gameBoard = ['','','','','','','',''];
+  gameBoard = ['', '', '', '', '', '', '', ''];
   moveCount = 0;
   $('.board>div>div').text('');
 };
 
-
 // Before the next player makes a move, check to see if the game has completed.
 let checkForWinner = function () {
-  if  ((gameBoard[0] === player && gameBoard[1] === player && gameBoard[2] === player) ||
-      (gameBoard[3] === player && gameBoard[4] === player && gameBoard[5] === player) ||
-      (gameBoard[6] === player && gameBoard[7] === player && gameBoard[8] === player) ||
-      (gameBoard[0] === player && gameBoard[3] === player && gameBoard[6] === player) ||
-      (gameBoard[1] === player && gameBoard[4] === player && gameBoard[7] === player) ||
-      (gameBoard[2] === player && gameBoard[5] === player && gameBoard[8] === player) ||
-      (gameBoard[0] === player && gameBoard[4] === player && gameBoard[8] === player) ||
-      (gameBoard[2] === player && gameBoard[4] === player && gameBoard[6] === player)) {
-  winner = player;
-  console.log(winner + ' is winner');
-  $('h1').text(winner + ' is winner!');
-  app.game.over = 'true';
-  resetGame();
+  if ((gameBoard[0] === player && gameBoard[1] === player && gameBoard[2] === player) ||
+     (gameBoard[3] === player && gameBoard[4] === player && gameBoard[5] === player) ||
+     (gameBoard[6] === player && gameBoard[7] === player && gameBoard[8] === player) ||
+     (gameBoard[0] === player && gameBoard[3] === player && gameBoard[6] === player) ||
+     (gameBoard[1] === player && gameBoard[4] === player && gameBoard[7] === player) ||
+     (gameBoard[2] === player && gameBoard[5] === player && gameBoard[8] === player) ||
+     (gameBoard[0] === player && gameBoard[4] === player && gameBoard[8] === player) ||
+     (gameBoard[2] === player && gameBoard[4] === player && gameBoard[6] === player)) {
+     winner = player;
+     console.log(winner + ' is winner');
+     $('h1').text(winner + ' is winner!');
+     app.game.over = 'true';
+     resetGame();
   }
   else if (moveCount === 9) {
-  console.log('Tie game.');
-  winner = 'tie';
-  $('h1').text('Tie game');
-  app.game.over = 'true';
-  resetGame();
+     console.log('Tie game.');
+     winner = 'tie';
+     $('h1').text('Tie game');
+     app.game.over = 'true';
+     resetGame();
   }
   else {
-  console.log('next move');
+     console.log('next move');
   }
 };
 

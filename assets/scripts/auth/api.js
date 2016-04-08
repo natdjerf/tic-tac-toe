@@ -1,7 +1,6 @@
 'use strict';
 
 const app = require('../app-data.js');
-const gameCheck = require('./game');
 
 const signUp = (success, failure, data) => {
   $.ajax({
@@ -19,17 +18,17 @@ const signIn = (success, failure, data) => {
     data,
   }).done(success)
   .fail(failure);
-  };
+};
 
 const signOut = (success, failure) => {
   $.ajax({
     method: 'DELETE',
     url: app.api + '/sign-out/' + app.user.id,
     headers:{
-    Authorization : 'Token token=' + app.user.token,
+        Authorization: 'Token token=' + app.user.token,
     },
   }).done(success)
-.fail(failure);
+  .fail(failure);
 };
 
 const changePassword = (success, failure, data) => {
@@ -37,11 +36,11 @@ const changePassword = (success, failure, data) => {
     method: 'PATCH',
     url: app.api + '/change-password/' + app.user.id,
     headers:{
-      Authorization : 'Token token=' + app.user.token,
+        Authorization: 'Token token=' + app.user.token,
     },
     data,
   }).done(success)
-    .fail(failure);
+  .fail(failure);
 };
 
 const createGame = (success, failure, data) => {
@@ -53,20 +52,15 @@ const createGame = (success, failure, data) => {
     },
     data,
   }).done(success)
-    .fail(failure);
-  };
-
-// PATCH! slightly working - over is working, index & value are not!! HMM!
-// you're not storing app.game.index or app.game.vale anywhere.
-// oh shit. game over is also not working well.
+  .fail(failure);
+};
 
 const updateGame = (success, failure) => {
-  console.log(app.game);
   $.ajax({
     method: 'PATCH',
     url: app.api + '/games/' + app.game.id,
     headers:{
-      Authorization : 'Token token=' + app.user.token,
+      Authorization: 'Token token=' + app.user.token,
     },
     data:{
     "game": {
@@ -78,8 +72,20 @@ const updateGame = (success, failure) => {
     },
   },
   }).done(success)
-    .fail(failure);
+  .fail(failure);
   };
+
+
+const getGames = (success, failure) => {
+  $.ajax({
+    method: 'GET',
+    url: app.api + '/games',
+    headers:{
+      Authorization: 'Token token=' + app.user.token,
+    },
+  }).done(success)
+  .fail(failure);
+};
 
 
 module.exports = {
@@ -89,4 +95,5 @@ module.exports = {
   changePassword,
   createGame,
   updateGame,
+  getGames,
 };

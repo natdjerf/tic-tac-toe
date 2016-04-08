@@ -18,18 +18,30 @@ $('.board').on('click', function () {
 });
 
 // To populate the board with move :
-$('.board > div > div').on("click", function() {
-  let location = $(event.target).attr('id');
-  console.log($(event.target).attr('id'));
+$('.board > div > div').on("click", function(event) {
+	if (moveCounter % 2 === 0) {
+		player = players[0];
+	}
+	else {
+		player = players[1];
+	}
+
+
+
+	let move = $(event.target).data('index');
   if ( $ (this).text() !== '') {
-    $( this ).text(player);
-    console.log($(event.target));
+    $ (this).text(player);
   }
   else {
     console.log('not available');
   }
-  console.log(location + 'was played by player ' + player);
+  console.log(move + 'was played by player ' + player);
 });
+
+
+
+
+
 
 
 // to push $(this) into the game piece array based off it's location do i:

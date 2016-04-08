@@ -5,7 +5,7 @@
 
 // use require without a reference to ensure a file is bundled
 const events = require('./auth/events');
-// const uiEvents = require('./auth/event-ui');
+
 
 
 // on document ready:
@@ -15,4 +15,5 @@ $(() => {
   console.log('Page loaded!');
   $('#myModal').modal('show');
   $('#create-game').addClass('hidden');
+  $('.modal-sign-out').addClass('hidden');
 });

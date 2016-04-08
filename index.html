@@ -7,23 +7,23 @@
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-<!-- End Nav Bar -->
+<!-- Nav Bar -->
       <nav class="navbar">
         <div class="container-fluid">
           </div>
             <ul class="nav navbar-nav navbar-right">
               <li class="modal-sign-in">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="nav-button" data-toggle="modal" data-target="#myModal">
                   New Game
                 </button>
               </li>
               <li class="modal-sign-out">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+                <button type="button" class="nav-button" data-toggle="modal" data-target="#myModal2">
                   My Account
                 </button>
               </li>
             </ul>
-        </div><!-- /.container-fluid -->
+        </div>
       </nav>
 <!-- End Nav Bar -->
       <div class="title-board">
@@ -55,12 +55,12 @@
           </div>
         </div>
       </div>
-<!-- Modal - sign up/sign in -->
+<!-- Modal - New Game -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h3 class="modal-title" id="myModalLabel">Hi there!</h3>
+                  <h3 class="modal-title" id="myModalLabel">Hi there! Ready to play tic-tac-toe?</h3>
                 </div>
                 <div class="modal-body">
                   <form id="sign-in">
@@ -92,7 +92,7 @@
             </div>
           </div>
 <!-- Modal  -->
-<!-- Modal change password/sign out-->
+<!-- Modal: My Account -->
           <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -103,6 +103,13 @@
                         <input type="password" name="passwords[old]" placeholder="Current Password">
                         <input type="password" name="passwords[new]" placeholder="New Password">
                         <input type="submit" name="submit" value="Change">
+                    </fieldset>
+                  </form>
+                  <form id="get-games">
+                    <fieldset>
+                      <h4>Get games</h4>
+                        <input type="submit" name="submit" value="Games">
+                        <input type="text" id="games-played">
                     </fieldset>
                   </form>
                   <form id="sign-out">

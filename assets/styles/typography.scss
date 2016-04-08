@@ -1,18 +1,66 @@
 html {
-  background-image: url(https://hcministry.files.wordpress.com/2015/11/chalkboard.jpg);
+  background-image: url(http://pre03.deviantart.net/b204/th/pre/i/2014/026/1/e/crumpled_paper_by_vesperity_stock-d73wpje.jpg);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+}
 
+.nav-button {
+  -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  box-shadow: inset 0px 39px 0px -24px #e67a73;
+  background-color: #e4685d;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display:inline-block;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Reenie Beanie', cursive;
+  padding: 6px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+
+input[type=submit] {
+  -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  box-shadow: inset 0px 39px 0px -24px #e67a73;
+  background-color: #e4685d;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display:inline-block;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Reenie Beanie', cursive;
+  padding: 6px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+button[type=submit] {
+  -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  box-shadow: inset 0px 39px 0px -24px #e67a73;
+  background-color: #e4685d;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display:inline-block;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Reenie Beanie', cursive;
+  padding: 6px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
 }
 
 body {
-  // background-image: url(https://hcministry.files.wordpress.com/2015/11/chalkboard.jpg);
-  // font-family: 'Reenie Beanie', cursive;
-  font-family: 'Shadows Into Light Two', cursive;
-  // font-family: 'Rock Salt', cursive;
-  font-size: 25px;
+  font-family: 'Courier New';
+  font-size: 16px;
   height: 100%;
   margin: 0;
   max-width: 650px;
@@ -21,15 +69,18 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 64px;
 }
 
 
 h3 {
+  font-family: 'Reenie Beanie', cursive;
   font-size: 40px;
 }
 
 h4 {
+  font-family: 'Reenie Beanie', cursive;
   font-size: 30px;
 }
 
@@ -47,6 +98,7 @@ h4 {
 }
 
 .board > div {
+  font-family: 'Reenie Beanie', cursive;
   float: left;
   position: relative;
   width: 100%;
@@ -55,12 +107,63 @@ h4 {
 
 .board > div > div {
   float: left;
-  font-size: 100px;
+  font-size: 110px;
   font-weight: bold;
   height: 100%;
   text-align: center;
-  width: 33.33%;
+  width: 33.3333333%;
 }
+
+.eraser-body{
+	width: 40px;
+	margin-left:200px;
+	margin-top:0px;
+	-webkit-transform:rotate(-45deg);
+	-webkit-animation: pencil 3s forwards;
+	}
+	.nib{
+		width:0px;
+		height:0px;
+		border-top: 15px solid #000000;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		margin:0px auto;
+		}
+	.nib2{
+		width:10px;
+		height:0px;
+		border-top: 40px solid #B08900;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		}
+	.body{
+		width:40px;
+		height:400px;
+		background-color:#3D06F8;
+		}
+	.body2{
+		width:40px;
+		height:20px;
+		background-color:#D0CACA;
+		}
+	.eraser{
+		width:40px;
+		height:25px;
+		background-color:#979602;
+		border-top-left-radius:10px;
+		border-top-right-radius:10px;
+		}
+@-webkit-keyframes pencil{
+	0%{-webkit-transform:rotate(-45deg);}
+	40%{-webkit-transform:rotate(25deg);}
+	50%{-webkit-transform:rotateZ(15deg);}
+	60%{-webkit-transform:rotateZ(25deg);}
+	70%{-webkit-transform:rotateZ(15deg);}
+	80%{-webkit-transform:rotateZ(25deg);}
+	90%{-webkit-transform:rotateZ(15deg);}
+	100%{-webkit-transform:rotateZ(25deg);}
+	}
+
 
 * {
   -moz-box-sizing: border-box;

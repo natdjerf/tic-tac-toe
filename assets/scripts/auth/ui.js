@@ -33,6 +33,12 @@ const updateGameSuccess = (data) => {
   console.log('update game success check');
 };
 
+const getGamesSuccess = (data) => {
+  app.game = data.game;
+  $('#games-played').val(data.games.length + ' Total Games' );
+  console.log(data);
+};
+
 const success = (data) => {
   console.log(data);
 };
@@ -50,6 +56,7 @@ module.exports= {
   changePasswordSuccess,
   createGameSuccess,
   updateGameSuccess,
+  getGamesSuccess,
   success,
   failure,
 };
