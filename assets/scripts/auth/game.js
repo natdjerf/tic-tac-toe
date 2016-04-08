@@ -8,6 +8,16 @@ let player;
 let winner;
 let moveCount = 0;
 
+
+// Clear the board to start another game without refreshing page:
+let resetGame = () => {
+  gameBoard = ['','','','','','','',''];
+  moveCount = 0;
+  $('.board>div>div').text('');
+};
+
+
+// Before the next player makes a move, check to see if the game has completed.
 let checkForWinner = function () {
   if  ((gameBoard[0] === player && gameBoard[1] === player && gameBoard[2] === player) ||
       (gameBoard[3] === player && gameBoard[4] === player && gameBoard[5] === player) ||
@@ -20,22 +30,22 @@ let checkForWinner = function () {
   winner = player;
   console.log(winner + ' is winner');
   $('h1').text(winner + ' is winner!');
-  $('.board > div > div').off('click');
   app.game.over = 'true';
+  resetGame();
   }
   else if (moveCount === 9) {
   console.log('Tie game.');
-  $('.board > div > div').off('click');
   winner = 'tie';
   $('h1').text('Tie game');
   app.game.over = 'true';
+  resetGame();
   }
   else {
   console.log('next move');
   }
 };
 
-
+// If spot is available, place the player's mark in the selected location:
 let movePlayed = function (data) {
   if (turn) {
   player = 'x';
@@ -59,7 +69,7 @@ let movePlayed = function (data) {
   }
 };
 
-
+// Ensure a location is available for play:
 let checkAvailability = function (data) {
   if (app.game.cells[data] === '') {
     console.log('available');
@@ -69,14 +79,10 @@ let checkAvailability = function (data) {
   }
   else {
     console.log('not available');
+    console.log(moveCount);
   }
 };
 
-let resetGame = () => {
-  gameBoard = ['','','','','','','',''];
-  $('h1').text('tic-tac-toe');
-  $('.board > div > div').on('click');
-};
 
 
 

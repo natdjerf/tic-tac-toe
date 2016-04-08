@@ -40,10 +40,10 @@ const gameHandlers = () => {
   $('#create-game').on('submit', function (event) {
     event.preventDefault();
     authApi.createGame(authUi.createGameSuccess, authUi.failure);
-    gameCheck.resetGame();
-    $('.board>div>div').text('');
     $('#myModal').modal('hide');
     console.log('game started');
+    $('h1').text('tic-tac-toe');
+    $('.board>div>div').text('');
   });
   $('.board > div > div').on("click", function(event) {
     event.preventDefault();
@@ -53,6 +53,11 @@ const gameHandlers = () => {
     $(event.target).text(gameCheck.app.game.cells[data]);
     authApi.updateGame(authUi.updateGameSuccess, authUi.failure);
     console.log('patch successfull???');
+  });
+  $('#get-games').on("click", function(event) {
+    event.preventDefault();
+    authApi.getGames(authUi.getGamesSuccess, authUi.failure);
+    console.log('games retrieved?');
   });
 };
 
